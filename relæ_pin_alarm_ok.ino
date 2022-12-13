@@ -1,5 +1,5 @@
-//sender phone number with country code
-const String PHONE = "+4599999999";
+
+const String PHONE = "+4599999999";//tlf nummer
 
 //GSM Module RX pin to ESP32 Pin 2
 //GSM Module TX pin to ESP32 Pin 4
@@ -168,7 +168,7 @@ void Reply(String text) {
   delay(1000);
   sim800.print(text);
   delay(100);
-  sim800.write(0x1A);  //ascii code for ctrl-26 //sim800.println((char)26); //ascii code for ctrl-26
+  sim800.write(0x1A);  
   delay(1000);
   Serial.println("SMS Sent Successfully.");
   delay(1000);
